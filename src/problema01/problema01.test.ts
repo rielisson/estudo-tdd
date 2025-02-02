@@ -1,13 +1,20 @@
-import { MyException, ordenarArray } from "./problema01";
+import { MyException } from './my-exception';
+import { OperadorArray } from './operador-array.interface';
+import { OperadorArrayCustomizado } from './operador-array-customizado';
 
 describe("Problema 01 de ordenaçao", () => {
+    let operadorArray: OperadorArray;
+
+    beforeAll(() => {
+        operadorArray = new OperadorArrayCustomizado();
+    })
 
     test("Dado um array de tamanho 0 deve retornar exception", () => {
         // given //dado
         const arrayX: any = [];
         // when // quando
         try {
-            ordenarArray(arrayX);
+            operadorArray.ordenarArray(arrayX);
         } catch (exception) {
             // then //entao
             expect(exception).toBeInstanceOf(MyException);
@@ -18,7 +25,7 @@ describe("Problema 01 de ordenaçao", () => {
         // given //dado
         const arrayX = [5];
         // when // quando
-        const resp = ordenarArray(arrayX);
+        const resp = operadorArray.ordenarArray(arrayX);
         // then //entao
         expect(resp.length).toEqual(arrayX.length);
     })
@@ -27,7 +34,7 @@ describe("Problema 01 de ordenaçao", () => {
         // given //dado
         const arrayX = [5,6,4,3,2,10];
         // when // quando
-        const resp = ordenarArray(arrayX);
+        const resp = operadorArray.ordenarArray(arrayX);
         // then //entao
         expect(resp).toEqual([2,3,4,5,6,10]);
     })
@@ -35,7 +42,7 @@ describe("Problema 01 de ordenaçao", () => {
         // given //dado
         const arrayX = [5,-6,4,-3,2,10,98,3,-6,6,-1,23];
         // when // quando
-        const resp = ordenarArray(arrayX);
+        const resp = operadorArray.ordenarArray(arrayX);
         // then //entao
         expect(resp).toEqual([2,3,4,5,6,10,23,98]);
     })
