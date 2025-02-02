@@ -3,7 +3,7 @@ import { OperadorArrayCustomizado } from "./operador-array-customizado";
 import { OperadorArrayPadrao } from "./operador-array-padrao.";
 import { OperadorArray } from "./operador-array.interface";
 
-class ApplicationSortConsole implements Application {
+export class ApplicationSortConsole implements Application {
     private operador: OperadorArray;
     private array?: number[];
 
