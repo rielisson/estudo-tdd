@@ -22,7 +22,7 @@ describe("Problema 01 de ordenaçao", () => {
         // then //entao
         expect(resp.length).toEqual(arrayX.length);
     })
-    
+
     test("Dado um array não ordenado deve retornar o array ordenado.", () => {
         // given //dado
         const arrayX = [5,6,4,3,2,10];
@@ -30,6 +30,14 @@ describe("Problema 01 de ordenaçao", () => {
         const resp = ordenarArray(arrayX);
         // then //entao
         expect(resp).toEqual([2,3,4,5,6,10]);
+    })
+    test("Dado um array de numeros negativos deve retornar um array ordenador com somente os numeros positivos .", () => {
+        // given //dado
+        const arrayX = [5,-6,4,-3,2,10,98,3,-6,6,-1,23];
+        // when // quando
+        const resp = ordenarArray(arrayX);
+        // then //entao
+        expect(resp).toEqual([2,3,4,5,6,10,23,98]);
     })
 
 })
