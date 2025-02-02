@@ -22,5 +22,14 @@ describe("Problema 01 de ordenaçao", () => {
         // then //entao
         expect(resp.length).toEqual(arrayX.length);
     })
+    
+    test("Dado um array não ordenado deve retornar o array ordenado.", () => {
+        // given //dado
+        const arrayX = [5,6,4,3,2,10];
+        // when // quando
+        const resp = ordenarArray(arrayX);
+        // then //entao
+        expect(resp).toEqual([2,3,4,5,6,10]);
+    })
 
 })
