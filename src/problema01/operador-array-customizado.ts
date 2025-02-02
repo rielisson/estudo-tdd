@@ -2,6 +2,7 @@ import { MyException } from "./my-exception";
 import { OperadorArray } from "./operador-array.interface";
 
 export class OperadorArrayCustomizado implements OperadorArray {
+    getNameInstance(): string { return 'OperadorArrayCustomizado' }
 
     ordenarArray(array: Array<number>): Array<number> {
         if (array.length < 1) throw new MyException("Array invalido o array deve ser maior que 1.");
