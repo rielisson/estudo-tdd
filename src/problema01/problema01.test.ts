@@ -1,12 +1,14 @@
 import { MyException } from './my-exception';
 import { OperadorArray } from './operador-array.interface';
 import { OperadorArrayCustomizado } from './operador-array-customizado';
+import { OperadorArrayPadrao } from './operador-array-padrao.';
 
 describe("Problema 01 de ordenaçao", () => {
     let operadorArray: OperadorArray;
 
     beforeAll(() => {
-        operadorArray = new OperadorArrayCustomizado();
+        // operadorArray = new OperadorArrayCustomizado();
+        operadorArray = new OperadorArrayPadrao();
     })
 
     test("Dado um array de tamanho 0 deve retornar exception", () => {
