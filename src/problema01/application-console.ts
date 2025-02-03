@@ -11,6 +11,10 @@ export class ApplicationSortConsole implements Application {
         this.operador = operador;
     }
 
+    getNameInstance() {
+        return 'console';
+    }
+
     run(): void {
         console.log(this.operador.getNameInstance());
         console.log(this.operador.ordenarArray(this.array!));

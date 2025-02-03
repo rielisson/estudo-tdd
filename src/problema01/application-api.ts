@@ -9,9 +9,14 @@ export class ApplicationSortApi implements Application {
     constructor(operador: OperadorArray) {
         this.operador = operador;
     }
+    
+    getNameInstance() {
+        return 'Api';
+    }
 
     run(): void {
-        console.log(this.operador.ordenarArray(array), "Application Api Main");
+        console.log(this.operador.getNameInstance());
+        console.log(this.operador.ordenarArray(this.array!));
     }
 
     setValues(array: number[]) {
