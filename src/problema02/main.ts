@@ -1,4 +1,8 @@
-import { Caminhao, Carro, Moto, Veiculo } from "./carro-classe";
+import { Caminhao } from "./caminhao-classe";
+import { Carro } from "./carro-classe";
+import { Moto } from "./moto-classe";
+import { Veiculo } from "./veiculo-classe";
+
 
 class Application {
     
@@ -17,9 +21,10 @@ class Application {
     criarCarros(quantidade: number) {
         let array = []
         for (let i = 0; i < quantidade; i++) {
-            const carro = new Carro('123' + i);
+            const carro = new Carro();
             carro.setCor('vermelho')
             carro.setModelo('bmw e3');
+            carro.setPlaca('123')
             array.push(carro);
         }
         return array;
@@ -29,8 +34,9 @@ class Application {
         let array = []
         for (let i = 0; i < quantidade; i++) {
             const moto = new Moto('1234' + i);
-            moto.setCor('vermelhor');
+            moto.setCor('vermelho');
             moto.setModelo('cj160');
+            moto.setPlaca('1234');
             array.push(moto);
         }
         return array;
@@ -39,9 +45,10 @@ class Application {
     criarCaminhao(quantidade: number) {
         let array = []
         for (let i = 0; i < quantidade; i++) {
-            const caminhao = new Caminhao('12345' + i);
+            const caminhao = new Caminhao();
             caminhao.setCor('azul');
             caminhao.setModelo('mercedes');
+            caminhao.setPlaca('12345')
             array.push(caminhao);
         }
         return array;
